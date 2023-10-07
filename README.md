@@ -17,5 +17,3 @@ Benjamin Zhang @benjaminzhang121 (https://www.linkedin.com/in/benjamin-zhang121/
 #### Important Links:
 
 (https://hack.mlh.io/hackru-7526/prizes)[Hack.MLH]
-(https://www.njtransit.com/innovation) [NJTransitInnovation]
-(https://www.njtransit.com/developer-tools) [NJTransitAPI]
