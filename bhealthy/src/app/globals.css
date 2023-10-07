@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+	--main-background: #fff2d8;
+	--side-background: #ead7bb;
+	--variance: #bca37f;
+	--touchup: #113946;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+body {
+	color: rgb(var(--main-background));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+/* ----- NAVBAR CSS ----- */
+#nav h3 {
+	font-family: var(--font-inter), sans-serif;
+}
+.nav__menu-bar {
+	display: flex;
+
+	flex-direction: column;
+	row-gap: 6px;
+	cursor: pointer;
+}
+.nav__menu-bar div {
+	width: 40px;
+	height: 4px;
+	background-color: white;
+	border-radius: 2px;
+}
+.nav__menu-list {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 114px;
+	width: 288px;
+	row-gap: 24px;
+	right: -288px;
+	padding: 24px 16px;
+	transition: all 0.2s;
+	min-height: calc(100vh);
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.nav__menu-list.active {
+	right: 0;
+}
+.nav__link {
+	font-size: 18px;
+	position: relative;
+	transition: all 0.2s;
+}
+
+.nav__link:hover {
+	font-weight: bold;
+}
+
+.center {
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media screen and (min-width: 768px) {
+	.nav__menu-bar {
+		display: none;
+	}
+	.nav__menu-list {
+		position: unset;
+		flex-direction: row;
+		min-height: fit-content;
+		width: fit-content;
+		column-gap: 24px;
+		align-items: center;
+		background-color: transparent;
+	}
+	.nav__link::before {
+		content: "";
+		position: absolute;
+		width: 0%;
+		height: 6px;
+		bottom: -16px;
+		left: 0;
+		background-color: black;
+		transition: all 0.2s;
+	}
+
+	.nav__link:hover:before {
+		width: 100%;
+	}
+}
+
+#navbar_item {
+	background: linear-gradient(currentColor 0 0) bottom left/
+		var(--underline-width, 0%) 0.1em no-repeat;
+	text-decoration: none;
+	transition: background-size 0.5s;
+}
+#navbar_item:hover {
+	--underline-width: 100%;
+}
+
+#navbar_text {
+	font-family: var(--font-inter), sans-serif;
+}
+
+#navbar_text:hover {
+	text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Login CSS */
+.login-header {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+
+.toSignUp {
+	color: white;
+	text-align: center;
+}
+
+.label-styles {
+	color: white;
+}
+.usernameInput {
+	text-align: center;
+}
+.passwordInput {
+	text-align: center;
+}
+.loginngin {
+	color: white;
+}
+/* Signup CSS */
+.signup {
+	color: white;
+	font-size: 100px;
+	font-family: Fira Sans;
+	font-weight: bold;
+}
+.signupContainer {
+	display: flex;
+	justify-content: space-between;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 0%;
+	width: 100%;
+}
+
+.signupContainer > div {
+	width: 30%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.signupContainer > div:first-child {
+	background: linear-gradient(to top, #ead7bb, white);
+}
+
+.signupContainer > div:nth-child(2) {
+	background: linear-gradient(to top, white, #ead7bb);
+	width: 40%;
+	box-sizing: border-box;
+}
+
+.signupContainer > div:last-child {
+	background: linear-gradient(to top, #d9d9d9, white);
+}
+
+.signupHeader {
+	color: #ffffff;
+	font-family: "Fira Sans-Bold", Helvetica;
+	font-size: 100px;
+	font-weight: 700;
+	left: 783px;
+	letter-spacing: 0;
+	line-height: normal;
+	position: absolute;
+	text-align: center;
+	top: 108px;
+	white-space: nowrap;
+	width: 353px;
+}
